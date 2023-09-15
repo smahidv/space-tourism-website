@@ -1,0 +1,32 @@
+
+.section-container .explore_button {
+  justify-content: center;
+}
+
+.section-container .explore_button button.explore {
+  border-radius: 50%;
+  padding: 5.4em 3.6em;
+  border: none;
+  color: black;
+  margin: 4em;
+  cursor: pointer;
+}
+.home-description-2 > * {
+  text-align: center;
+}
+@media (min-width: 900px) {
+   section.hero-section{
+    padding-top: 19em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .explore_button {
+    justify-content: end !important;
+    align-self: end;
+  }
+  .section-container .explore_button button.explore {
+    margin: unset;
+  }
+  .home-description-2 > * {
+    text-align: start;
+  }
+}

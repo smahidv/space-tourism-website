@@ -1,0 +1,75 @@
+.technology-numeration .technology-number{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: fit-content;
+    cursor: pointer;
+    padding: .5em .7em;
+}
+.technology-2{
+    display: grid;
+    gap:3em;
+ 
+    
+}
+.technology-2 .technology-2-right-images{
+    order: -1;
+}
+.technology-2 .technology-numeration{
+gap:2em;
+margin-block: 2.5em;
+justify-content: center;
+}
+.hero-padding-bottom{
+    padding-bottom: 4.6em;
+}
+.technology-2-left{
+    align-self: center;
+}
+.technology-number.selecte{
+ 
+    background-color: white;
+    color: black;
+      
+  }
+  .margin-left{
+    margin-left: 4em;
+  }
+
+.technology-2-right-images{
+    justify-self: end;
+}
+.erminology{
+  color: var(--Grayish-blue);
+}
+
+
+@media (min-width: 900px){
+
+    .technology-2{
+      grid-template-columns: repeat(2,1fr);
+      padding-top: unset;
+    
+    }
+    .erminology{
+        text-align: start !important;
+    }
+    .technology-2 .technology-2-right-images{
+        order: unset;
+    }
+    .technology-2 .technology-numeration{
+        flex-direction: column;
+        }
+    .technology-2-subleft-2{
+        display: flex;
+        gap:4em;
+    }
+    .technology-numeration .technology-number{
+
+        padding: 1.1em 1.4em !important;
+    }
+    .padding{
+        padding-inline: unset !important;
+    }
+  
+    
+}

@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Khitan+Small+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --f-f: "Noto Serif Khitan Small Script", serif;
+  --f-light: 'Noto Serif', serif;
+  --f-f_forP: "ABeeZee", sans-serif;
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --shared-padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  overflow-x: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+*:not(p) {
+  text-transform: uppercase;
+  font-family: var(--f-f);
+  letter-spacing: 2px;
+}
+p {
+  text-transform: capitalize !important;
+  font-family: var(--f-f_forP) !important;
+  max-width: 55ch;
+  color: var(--Grayish-blue);
+}
+.flex {
+  display: flex;
+}
+.center {
+  text-align: center;
+}
+.red {
+  border: 1px solid red;
+}
+
+/* ///////////////////////////////////////////background-image////////////////////////////////////////// */
+.main-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100%;
+  padding-bottom: 6rem;
+}
+/* //////////////////////////////////shared styles////////////////////////////////// */
+.hero-title-shared {
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  color: white;
+  gap:1em;
+  font-family: var(--f-light);
+  font-weight: 300;
+
+}
+.padding{
+  padding-inline: min(4rem,10%);
+
+}
+
+
+.hero-title-shared span{
+  color: var(--Dark-grayish-blue);
+  font-weight: bold;
+  font-family: var(--f-f_forP);
+  
+}
+.current-title-secondary-shared{
+  font-size: clamp(1.3rem,2.4vw, 2rem);
+margin-block:.5em;
+
+ 
+}
+.current-function-shared{
+  color: var(--Dark-grayish-blue);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.bold-title-shared {
+  font-size: clamp(1rem, 25vw, 6rem);
+  margin-block: 1vh;
+  font-weight: lighter;
+}
+.shared-padding {
+  padding-top: var(--shared-padding);
+}
+.section-container {
+  display: flex;
+  justify-content: center;
+ 
+}
+section {
+  padding-top: 10em;
+  display: grid;
+  justify-content: center;
+  max-width: 1080px;
+  
+}
+
+@media (min-width: 900px) {
+  .bold-title-shared,
+  p {
+    text-align:left !important;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  .hero-title-shared {
+    margin-bottom: 3rem;
+    text-align: start;
+}
+section{
+  padding-left: 3em;
+}
+
 }
