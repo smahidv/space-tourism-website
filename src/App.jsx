@@ -22,10 +22,10 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       const routeBackgrounds = {
-        "/": window.innerWidth <= 900 ? bgHomeMobile : bgHome,
-        "/destination": window.innerWidth <= 900 ? bgDestinationMobile : bgDestination,
-        "/crew": window.innerWidth <= 900 ? bgCrewMobile : bgCrew,
-        "/technology": window.innerWidth <= 900 ? bgTechnologyMobile : bgTechnology,
+        "/space-tourism-website/": window.innerWidth <= 900 ? bgHomeMobile : bgHome,
+        "/space-tourism-website/destination": window.innerWidth <= 900 ? bgDestinationMobile : bgDestination,
+        "/space-tourism-website/crew": window.innerWidth <= 900 ? bgCrewMobile : bgCrew,
+        "/space-tourism-website/technology": window.innerWidth <= 900 ? bgTechnologyMobile : bgTechnology,
       };
       setBackgroundImage(routeBackgrounds[location.pathname]);
     };
