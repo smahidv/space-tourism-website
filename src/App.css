@@ -155,6 +155,10 @@ section {
 }
 
 @media (min-width: 900px) {
+  .main-container {
+    padding-top: 2.5em;
+   
+  }
   .bold-title-shared,
   p {
     text-align:left !important;
@@ -166,5 +170,13 @@ section {
 section{
   padding-left: 3em;
 }
+
+}
+/* ///////////////////////////:user select ////////////////////// */
+.explore_button  button.explore,
+.dots-crew .dot ,
+.technology-numeration .technology-numeration{
+  user-select: text !important;
+
 
 }
