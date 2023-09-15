@@ -6,6 +6,7 @@
   position: relative;
   top: 2em;
   margin-left: 2em;
+
 }
 .header-icons-mobile > img {
   cursor: pointer;
@@ -20,7 +21,7 @@ ul.primary-navigation {
   position: absolute;
   inset: 0 0 0 30%;
   padding: 10em 2rem;
-  line-height: 2em;
+  line-height: 3em;
   background: hsl(0 0% 0% /0.5);
   z-index: 11;
   height: 100vh;
@@ -58,7 +59,6 @@ ul.primary-navigation.open {
     height: fit-content;
     inset: unset;
     right: 0;
-    
   }
   ul.primary-navigation::after {
     content: "";
@@ -67,21 +67,21 @@ ul.primary-navigation.open {
     z-index: 22;
     background-color: rgb(198, 198, 198);
     right: 48em;
- 
+
     top: 50%;
 
-    width:calc(100vw - 57em);
-   
-   
+    width: calc(100vw - 57em);
   }
   .header-icons-mobile {
     display: none;
   }
-  .primary-header-2 img.logo,
-  .header-icons-mobile > img
-   {
 
-    top:unset;
+  .header-icons-mobile > img {
+    top: unset;
+ 
   }
   
+  .primary-header-2 img.logo{
+    top:.5em;
+  }
 }

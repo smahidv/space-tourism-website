@@ -4,7 +4,7 @@ import Home from "./pages/home/Home.jsx";
 import Destination from "./pages/destination/Destination";
 import Crew from "./pages/crew/Crew";
 import Technology from "./pages/technology/Technology";
-import Navigation from "./components/navbar/Navigation.jsx";
+
 import './App.css';
 import bgHome from "./assets/home/background-home-desktop.jpg"
 import bgDestination from "./assets/destination/background-destination-desktop.jpg"
@@ -14,6 +14,8 @@ import bgHomeMobile from "./assets/home/background-home-mobile.jpg"
 import bgDestinationMobile from "./assets/destination/background-destination-mobile.jpg"
 import bgTechnologyMobile from "./assets/technology/background-technology-mobile.jpg"
 import bgCrewMobile from "./assets/crew/background-crew-mobile.jpg"
+import Navigation from "./components/navbar/Navigation.jsx";
+
 
 function App() {
   const location = useLocation();
@@ -22,10 +24,10 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       const routeBackgrounds = {
-        "/space-tourism-website/": window.innerWidth <= 900 ? bgHomeMobile : bgHome,
-        "/space-tourism-website/destination": window.innerWidth <= 900 ? bgDestinationMobile : bgDestination,
-        "/space-tourism-website/crew": window.innerWidth <= 900 ? bgCrewMobile : bgCrew,
-        "/space-tourism-website/technology": window.innerWidth <= 900 ? bgTechnologyMobile : bgTechnology,
+        "/" : window.innerWidth <= 900 ? bgHomeMobile : bgHome,
+        "/destination": window.innerWidth <= 900 ? bgDestinationMobile : bgDestination,
+        "/crew": window.innerWidth <= 900 ? bgCrewMobile : bgCrew,
+        "/technology": window.innerWidth <= 900 ? bgTechnologyMobile : bgTechnology,
       };
       setBackgroundImage(routeBackgrounds[location.pathname]);
     };
@@ -41,8 +43,8 @@ function App() {
   return (
     <main>
     <div className="main-container" style={{ backgroundImage: `url('${backgroundImage}')` }}>
-      <Navigation />
-      <Routes>
+    <Navigation/>
+    <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destination" element={<Destination />} />
         <Route path="/crew" element={<Crew />} />

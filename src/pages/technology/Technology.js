@@ -26,6 +26,7 @@ const Technology = () => {
       selectedTitle=""
   }
   return(
+    
     <div className="section-container  ">
     <section>
    <div className="technology-container shared-padding">
